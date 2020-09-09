@@ -16,5 +16,5 @@ val=os.environ
 
 #Printing
 
-print("Web brower : "+val['HTTP_USER_AGENT'])
-print("Web brower : "+val['REMOTE_ADDR'])
+print("Web browser : "+val['HTTP_USER_AGENT'])
+print("User ip : "+val['REMOTE_ADDR'])
