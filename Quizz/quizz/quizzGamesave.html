@@ -1,0 +1,58 @@
+<html style="background-image:url('http://justalternate.pw/quizz/wallpaper.png');">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html;" charset="ANSI" />
+      <link rel="stylesheet" type="text/css" href="http://144.91.84.212/quizz/css.css"/>
+      <script type="text/javascript" src="http://justalternate.pw/quizz/quizzGame.js"></script>
+      <script charset="ANSI">
+      Reponses={}
+      Questions={}
+      Reponsegagnante={}
+      </script>
+      <title>QuizzTime!</title>
+    </head>
+
+    <score>
+      <h1 style="display:inline">Ton Score :</h1>
+      <h2 style="display:inline" id="score">0</h2>
+    </score>
+
+    <header  id="titre" style="margin-top:2%;font-size:200%;color:white;font-family:cursive;text-align:center;"> Bienvenue </header>
+  <body>
+      <button id="startingButton" class="scale-effect" style="font-size:2.5vw;color:white;font-family:cursive;left:40vw;top:30vh;width:20vw;height:15vh;position:absolute;background-color:#ff3f34;border:none;" onclick="quizz()"> Start Quizz ! </button>
+
+      <p id="Question" style=""> </p>
+
+      <TimeLeft id="compteur" style="display:none;position:absolute;left:40vw;top:15vh;background-color:#7d5fff;border: 1vh solid #7d5fff;border-radius:1px 1px 1px 1px;padding:12px;">
+
+      <p style="font-family:cursive;display:inline;position;absolute;color:#fffa65;font-size:110%;font-weight:bold;">Temps Restant</p>
+      <input id="minutes" type="text" style="width: 3vw; border: none;text-align:center; font-size: 100%;font-weight: bold; color: #ffaf40; width:3vw;height:5vh;">
+      <font id="commalike" color="#ffaf40" size="5"> : </font>
+      <input id="seconds" type="text" style="width: 3vw; border: none;text-align:center; font-size: 100%; font-weight: bold; color: #ffaf40;width:3vw;height:5vh;">
+
+      </TimeLeft>
+
+      <form method="POST" action="/cgi-enabled/quizzGame.py">
+      <Ligne1 style="display:inline;">
+              <input onclick="questionRandom(1)" id="Rep1" name="rep1" style="display:none;font-size:100.2%;color:white;font-family:cursive;width:30vw;height:10vh;left:14%;top:42%;position:absolute;background-color:#ff3f34;text-align:center;border:none;" class="scale-effect" type="button" value=" ">
+              <input onclick="questionRandom(2)" id="Rep2" name="rep2" style="display:none;font-size:100.2%;color:white;font-family:cursive;width:30vw;height:10vh;left:60%;top:42%;position:absolute;background-color:#ff3f34;text-align:center;border:none;" class="scale-effect" type="button" value=" ">
+      </Ligne1>
+      <Ligne2 style="display:inline;">
+              <input onclick="questionRandom(3)" id="Rep3" name="rep3" style="display:none;font-size:100.2%;color:white;font-family:cursive;width:30vw;height:10vh;left:14%;top:65%;position:absolute;background-color:#ff3f34;text-align:center;border:none;" class="scale-effect" type="button" value=" ">
+              <input onclick="questionRandom(4)" id="Rep4" name="rep4" style="display:none;font-size:100.2%;color:white;font-family:cursive;width:30vw;height:10vh;left:60%;top:65%;position:absolute;background-color:#ff3f34;text-align:center;border:none;" class="scale-effect" type="button" value=" ">
+      </Ligne2>
+      <div style="display:none;">
+      <input type="texte" name="pseudo" value="{}">
+      <input type="password" name="mdp" value="{}">
+      <p style= margin-top:5vh;> </p>
+        <input class="scale-effect" style="text-align:center;font-size:1.5vw;color:white;font-family:Aller;position:absolute;background-color:#ff3f34;border:none;"type="submit" value="Entrer dans la partie">
+        </div>
+        </form>
+
+
+
+        <img id="fail" style="display:none;width:200px;position:absolute;top:15%;left:85%;" src="http://justalternate.pw/quizz/section-fail.png">
+        <img id="pass" style="display:none;width:200px;position:absolute;top:15%;left:85%;" src="http://justalternate.pw/quizz/section-pass.png">
+
+
+  </body>
+</html>

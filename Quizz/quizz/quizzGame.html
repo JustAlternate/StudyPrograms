@@ -1,0 +1,58 @@
+<html style="background-image:url('http://justalternate.pw/quizz/wallpaper.png');">
+	    <head>
+	      <meta http-equiv="Content-Type" content="text/html;" charset="ANSI" />
+	      <link rel="stylesheet" type="text/css" href="http://justalternate.pw/quizz/css.css"/>
+	      	<script type="text/javascript" src="http://justalternate.pw/quizz/quizzGame.js"></script>
+	      	<script charset="ANSI">
+	      		Reponses={}
+	      		Questions={}
+	      		Reponsegagnante={}
+	      	</script>
+	      <title>QuizzTime!</title>
+	    </head>
+
+	    <score>
+	      <h1 id="h1game">Ton Score :</h1>
+	      <h2 id="score">0</h2>
+	    </score>
+
+	     <header id="titre" class="titre"> Bienvenue </header>
+
+      <body>
+        <button class="scale-effect startingButton" id="startingButton" onclick="quizz()"> Start Quizz ! </button>
+	      <p id="Question" class="question"> </p>
+
+         <TimeLeft id="compteur" class="compteur_class">
+	            <p class="temps">Temps Restant</p>
+	            <input id="minutes" type="text" class="minutes_class">
+	            <font id="commalike" color="#ffaf40" size="5"> : </font>
+	            <input id="seconds" type="text" class="seconds_class">
+	       </TimeLeft>
+
+	      <form method="POST" action="/cgi-enabled/quizzGame.py">
+
+        <Ligne1 style="display:inline;">
+	              <input onclick="questionRandom(1)" id="Rep1" name="rep1" class="scale-effect rep1" type="button" value=" ">
+	              <input onclick="questionRandom(2)" id="Rep2" name="rep2" class="scale-effect rep2" type="button" value=" ">
+	      </Ligne1>
+
+        <Ligne2 style="display:inline;">
+	              <input onclick="questionRandom(3)" id="Rep3" name="rep3" class="scale-effect rep3" type="button" value=" ">
+	              <input onclick="questionRandom(4)" id="Rep4" name="rep4" class="scale-effect rep4" type="button" value=" ">
+	      </Ligne2>
+
+        <div style="display:none;">
+
+        <input type="texte" name="pseudo" value="{}">
+	      <input type="password" name="mdp" value="{}">
+
+        <p style= margin-top:5vh;> </p>
+	        <input class="scale-effect entrer" type="submit" value="Entrer dans la partie">
+	        </div>
+	        </form>
+
+	        <img id="fail" class="fail" src="http://justalternate.pw/quizz/section-fail.png">
+	        <img id="pass" class="pass" src="http://justalternate.pw/quizz/section-pass.png">
+          
+	 </body>
+</html>

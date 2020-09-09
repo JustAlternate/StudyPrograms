@@ -1,0 +1,37 @@
+<html style="background-image:url('http://justalternate.pw/quizz/wallpaper.png');">
+  <head>
+ 	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	   <title>Quizz !</title>
+	    <script type="text/javascript" src="quizzMainScreen.js"></script>
+	     <link rel="stylesheet" type="text/css" href="http://144.91.84.212/quizz/css.css"/>
+  </head>
+
+    <header class="headqadd">Question A Venir</header>
+
+  <body>
+    <a href="http://justalternate.pw/quizz"> <img class="image_toutou" src="http://justalternate.pw/quizz/titlebutton.png"> <a>
+        <form method="POST" action="/cgi-enabled/addquestion.py">
+            <div>
+              <p class="padd inline" style="color:white;"> Ta Question: </h1>
+              <input class="scale-effect qadd" type="texte" id="inputLogin" name="question" value="">
+
+              <p class="padd"> La première réponse sera la réponse correcte </p>
+              <p class="padd" style="color:white;" > Rep1 </h1>
+
+              <input class="scale-effect qadd" id="rep1"   type="text" value="">
+              <p class="padd" style="color:white;" > Rep2 </h1>
+
+              <input class="scale-effect qadd" id="rep2"  type="text" value="">
+              <p class="padd" style="color:white;"> Rep3 </h1>
+
+              <input  class="scale-effect qadd" id="rep3"  type="text" value="">
+              <p class="padd" style="color:white;" > Rep4 </h1>
+
+              <input  class="scale-effect qadd" id="rep4"  type="text" value="">
+              <p style="margin-top:5vh;"> </p>
+
+              <input class="scale-effect index" type="submit" value="Pose ta question">
+            </div>
+        </form>
+  </body>
+</html>
